@@ -125,8 +125,8 @@ int main( int argc, char* argv[] )
 
     sub = nh.subscribe("/yumi/joint_states", 1000, joint_states_callback);
 
-    left_pub = nh.advertise<trajectory_msgs::JointTrajectory>("/yumi/joint_traj_vel_controller_l/command", 100, left_vel_controller_callback);
-	right_pub = nh.advertise<trajectory_msgs::JointTrajectory>("/yumi/joint_traj_vel_controller_r/command", 100, right_vel_controller_callback);
+    left_pub = nh.advertise<trajectory_msgs::JointTrajectory>("/yumi/joint_traj_vel_controller_l/command", 100, &left_vel_controller_callback);
+	right_pub = nh.advertise<trajectory_msgs::JointTrajectory>("/yumi/joint_traj_vel_controller_r/command", 100, &right_vel_controller_callback);
 
 	ros::spin();
 
