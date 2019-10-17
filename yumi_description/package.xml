@@ -11,5 +11,5 @@
   <author email="yoshua.nava@kth.se">Yoshua Nava</author>
 
   <buildtool_depend>catkin</buildtool_depend>
-  <exec_depend>xacro</exec_depend>
+  <exec_depend>hector_xacro_tools</exec_depend>
 </package>
