@@ -42,11 +42,11 @@
   <!--   <test_depend>gtest</test_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>yumi_description</build_depend>
-  <build_depend>yumi_hw</build_depend>
+  <!-- <build_depend>yumi_hw</build_depend> -->
   <build_depend>yumi_moveit_config</build_depend>
   <build_depend>yumi_support</build_depend>
   <run_depend>yumi_description</run_depend>
-  <run_depend>yumi_hw</run_depend>
+  <!-- <run_depend>yumi_hw</run_depend> -->
   <run_depend>yumi_moveit_config</run_depend>
   <run_depend>yumi_support</run_depend>
 

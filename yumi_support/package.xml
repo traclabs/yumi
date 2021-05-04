@@ -20,5 +20,5 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
-  <run_depend>abb_driver</run_depend>
+  <!-- <run_depend>abb_driver</run_depend> -->
 </package>

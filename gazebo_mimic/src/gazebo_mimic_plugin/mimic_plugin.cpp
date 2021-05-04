@@ -45,7 +45,8 @@ MimicPlugin::MimicPlugin()
 
 MimicPlugin::~MimicPlugin()
 {
-  event::Events::DisconnectWorldUpdateBegin(this->updateConnection);
+  // gazebo::event::Events::DisconnectWorldUpdateBegin(this->updateConnection);
+  this->updateConnection.reset();
 
   kill_sim = true;
 }
@@ -85,9 +86,9 @@ void MimicPlugin::Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf )
 void MimicPlugin::UpdateChild()
 {
 #if GAZEBO_MAJOR_VERSION >= 4
-    mimic_joint_->SetPosition(0, joint_->GetAngle(0).Radian()*multiplier_);
+    mimic_joint_->SetPosition(0, joint_->Position(0)*multiplier_); // should be in rad already
 #else
-    mimic_joint_->SetAngle(0, joint_->GetAngle(0).Radian()*multiplier_);
+    mimic_joint_->SetAngle(0, joint_->Position(0)*multiplier_);
 #endif
 }
 
