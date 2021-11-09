@@ -11,6 +11,8 @@
   <!-- Import Gazebo plugins -->
   <xacro:include filename="$(find yumi_description)/urdf/Gazebo/gazebo.urdf.xacro"/>
 
+  <xacro:property name="yumi_parent" default="world"/>
+
 
   <!--yumi-->
   <xacro:yumi name="yumi" hardware_interface="hardware_interface/$(arg arms_interface)" parent="${yumi_parent}" >
