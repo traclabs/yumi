@@ -162,8 +162,9 @@ int main( int argc, char** argv )
     /* Write the command to YuMi */
     yumi_robot->write(now, period);
 
+    std_msgs::Float64 msg; msg.data = period.toSec();
     // std::cout << "Control loop period is " << period.toSec() * 1000 << " ms" << std::endl;
-    control_period_pub.publish(period.toSec());
+    control_period_pub.publish(msg);
 
   }
 
