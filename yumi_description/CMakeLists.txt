@@ -5,7 +5,7 @@ find_package(catkin REQUIRED)
 
 catkin_package()
 
-foreach( urdf meshes)
+foreach(dir urdf meshes)
    install( DIRECTORY ${dir}/
          DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir} )
 endforeach(dir)
