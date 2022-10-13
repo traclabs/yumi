@@ -1,11 +1,23 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.5)
 project(yumi_description)
 
-find_package(catkin REQUIRED)
+add_compile_options(-std=c++14)
 
-catkin_package()
+set(DEPS
+  xacro
+)
 
-foreach(dir urdf meshes)
-   install( DIRECTORY ${dir}/
-         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir} )
-endforeach(dir)
+find_package(ament_cmake REQUIRED)
+
+
+foreach(dependency ${DEPS})
+  find_package(${dependency} REQUIRED)
+endforeach()
+
+
+install( DIRECTORY urdf meshes
+         DESTINATION share/${PROJECT_NAME} 
+)
+
+ament_export_dependencies(${DEPS})
+ament_package()
