@@ -48,7 +48,7 @@ class YumiGripperStateHandler : public industrial::message_handler::MessageHandl
 		boost::mutex data_buffer_mutex;
 
     public:
-		bool getGripperStates(float &left, float &right) 
+		void getGripperStates(float &left, float &right) 
 		{ 
 			boost::mutex::scoped_lock lock(data_buffer_mutex);
 			left = gripper_positions[0];
