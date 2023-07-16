@@ -4,6 +4,8 @@
 #include <boost/thread/mutex.hpp>
 #include <boost/thread.hpp>
 
+#include <netinet/in.h>
+
 #include <ros/ros.h>
 #include "simple_message/message_handler.h"
 #include "simple_message/message_manager.h"

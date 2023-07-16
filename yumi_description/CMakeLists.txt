@@ -7,5 +7,16 @@ install(DIRECTORY meshes urdf
   DESTINATION share/${PROJECT_NAME}/
 )
 
+set(DEPS
+  xacro
+)
+
+foreach(dependency ${DEPS})
+  find_package(${dependency} REQUIRED)
+endforeach()
+
+ament_export_dependencies(${DEPS})
+
 ament_package()
+
 
