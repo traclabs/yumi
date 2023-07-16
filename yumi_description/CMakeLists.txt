@@ -1,7 +1,11 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.16.0)
 project(yumi_description)
 
-find_package(catkin REQUIRED)
+find_package(ament_cmake REQUIRED)
 
-catkin_package()
+install(DIRECTORY meshes urdf
+  DESTINATION share/${PROJECT_NAME}/
+)
+
+ament_package()
 

@@ -6,7 +6,7 @@
     <!-- Import Transmissions -->
     <xacro:include filename="$(find yumi_description)/urdf/Grippers/yumi_servo_gripper.transmission.xacro" />
 
-    <xacro:include filename="$(find hector_xacro_tools)/urdf/inertia_tensors.urdf.xacro" />
+    <xacro:include filename="$(find yumi_description)/urdf/hector_xacro_tools/inertia_tensors.urdf.xacro" />
 
 
 
