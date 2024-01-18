@@ -42,7 +42,7 @@ class YumiGripperStateHandler : public industrial::message_handler::MessageHandl
 		boost::mutex data_buffer_mutex;
 
     public:
-		bool getGripperStates(float &left, float &right) 
+		void getGripperStates(float &left, float &right) 
 		{ 
 			boost::mutex::scoped_lock lock(data_buffer_mutex);
 			left = gripper_positions[0];
@@ -170,7 +170,7 @@ class YumiGripperStateInterface {
 			connection_command->sendMsg(grasp_msg);
 		}
 
-		bool init(std::string ip = "", int port = DEFAULT_STATE_PORT, int port_command = DEFAULT_COMMAND_PORT) 
+		void init(std::string ip = "", int port = DEFAULT_STATE_PORT, int port_command = DEFAULT_COMMAND_PORT) 
 		{
 			/* Initialize connection */
 			char* ip_addr = strdup(ip.c_str());  // connection.init() requires "char*", not "const char*"
