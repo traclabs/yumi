@@ -3,6 +3,7 @@ project(yumi_test_controllers)
 
 set(CMAKE_BUILD_TYPE RelWithDebInfo)
 add_compile_options(-std=c++11)
+add_compile_options(-Wno-pointer-bool-conversion)
 
 find_package(catkin REQUIRED COMPONENTS
   angles
@@ -27,9 +28,9 @@ catkin_package(
   LIBRARIES ${PROJECT_NAME}
 )
 
-include_directories(include 
+include_directories(include
   ${Boost_INCLUDE_DIR}
-  ${EIGEN3_INCLUDE_DIRS} 
+  ${EIGEN3_INCLUDE_DIRS}
   ${catkin_INCLUDE_DIRS}
 )
 
