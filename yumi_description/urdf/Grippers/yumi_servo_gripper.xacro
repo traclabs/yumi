@@ -6,7 +6,7 @@
     <!-- Import Transmissions -->
     <xacro:include filename="$(find yumi_description)/urdf/Grippers/yumi_servo_gripper.transmission.xacro" />
 
-    <xacro:include filename="$(find hector_xacro_tools)/urdf/inertia_tensors.urdf.xacro" />
+    <!--<xacro:include filename="$(find hector_xacro_tools)/urdf/inertia_tensors.urdf.xacro" />-->
 
 
 
@@ -63,7 +63,7 @@
     </joint>
 
     <link name="${name}_finger_r">
-      <xacro:inertial_cuboid mass="0.04" x_length="0.05" y_length="0.05" z_length="0.05" />
+      <!--<xacro:inertial_cuboid mass="0.04" x_length="0.05" y_length="0.05" z_length="0.05" />--> <!-- hector_xacro_tools not in ROS2 -->
 
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -95,7 +95,7 @@
     </joint>
 
     <link name="${name}_finger_l">
-      <xacro:inertial_cuboid mass="0.04" x_length="0.05" y_length="0.05" z_length="0.05" />
+      <!--<xacro:inertial_cuboid mass="0.04" x_length="0.05" y_length="0.05" z_length="0.05" />--> <!-- hector_xacro_tools not in ROS2 -->
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
