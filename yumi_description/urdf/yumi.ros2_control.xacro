@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:macro name="ros2_control_joint"
+        params="joint_name initial_position:=0.0">
+        <joint name="${joint_name}">
+            <state_interface name="position">
+              <param name="initial_value">${initial_position}</param>
+            </state_interface>
+            <state_interface name="velocity" />
+            <state_interface name="effort" />
+
+            <command_interface name="position"/>
+            <command_interface name="velocity"/>
+            <command_interface name="effort"/>
+        </joint>
+    </xacro:macro>
+
+
+    <xacro:macro name="yumi_ros2_control" params="interface_type">
+
+        <ros2_control name="YumiSystem" type="system">
+            <hardware>
+            <xacro:if value="${interface_type == 'mock'}">
+                <plugin>mock_components/GenericSystem</plugin>
+                <param name="mock_sensor_commands">false</param>
+                <param name="state_following_offset">0.0</param>
+            </xacro:if>
+            <xacro:if value="${interface_type == 'gazebo'}">
+                <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+            </xacro:if>
+            </hardware>
+
+            <!-- Joint interfaces -->
+            <xacro:ros2_control_joint joint_name="yumi_joint_1_r" initial_position="0.0"/>
+            <xacro:ros2_control_joint joint_name="yumi_joint_2_r" initial_position="-1.5708"/>
+            <xacro:ros2_control_joint joint_name="yumi_joint_7_r" initial_position="-1.4"/>
+            <xacro:ros2_control_joint joint_name="yumi_joint_3_r" initial_position="0.707"/>
+            <xacro:ros2_control_joint joint_name="yumi_joint_4_r" initial_position="-1.5708"/>
+            <xacro:ros2_control_joint joint_name="yumi_joint_5_r" initial_position="-1.0"/>
+            <xacro:ros2_control_joint joint_name="yumi_joint_6_r" initial_position="-1.5708"/>
+            <xacro:ros2_control_joint joint_name="yumi_joint_1_l" initial_position="0.0"/>
+            <xacro:ros2_control_joint joint_name="yumi_joint_2_l" initial_position="-1.5708"/>
+            <xacro:ros2_control_joint joint_name="yumi_joint_7_l" initial_position="1.4"/>
+            <xacro:ros2_control_joint joint_name="yumi_joint_3_l" initial_position="0.707"/>
+            <xacro:ros2_control_joint joint_name="yumi_joint_4_l" initial_position="-1.5708"/>
+            <xacro:ros2_control_joint joint_name="yumi_joint_5_l" initial_position="1.0"/>
+            <xacro:ros2_control_joint joint_name="yumi_joint_6_l" initial_position="1.5708"/>
+            <xacro:ros2_control_joint joint_name="gripper_r_joint" initial_position="0.0"/>
+            <xacro:ros2_control_joint joint_name="gripper_l_joint" initial_position="0.0"/>
+        </ros2_control>
+        
+        <!-- Gazebo ROS Control plugin -->
+        <xacro:if value="${interface_type == 'gazebo'}">
+          <gazebo>
+            <plugin name="gz_ros2_control::GazeboSimROS2ControlPlugin" filename="gz_ros2_control-system">
+              <!--<parameters>$(find yumi_description)/config/ros2_control_yumi.yaml</parameters>-->
+          </plugin>
+          </gazebo>
+        </xacro:if>
+        
+    </xacro:macro>
+
+
+</robot>
