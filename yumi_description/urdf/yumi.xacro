@@ -31,7 +31,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yumi_description/meshes/body.stl"/>
+          <mesh filename="package://yumi_description/meshes/coarse/body.stl"/>
         </geometry>
         <material name="Light_Grey"/>
       </visual>
@@ -70,7 +70,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yumi_description/meshes/link_1.stl"/>
+          <mesh filename="package://yumi_description/meshes/coarse/link_1.stl"/>
         </geometry>
         <material name="Grey"/>
       </visual>
@@ -105,7 +105,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yumi_description/meshes/link_2.stl"/>
+          <mesh filename="package://yumi_description/meshes/coarse/link_2.stl"/>
         </geometry>
         <material name="Grey"/>
       </visual>
@@ -140,7 +140,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yumi_description/meshes/link_3.stl"/>
+          <mesh filename="package://yumi_description/meshes/coarse/link_3.stl"/>
         </geometry>
         <material name="Grey"/>
       </visual>
@@ -175,7 +175,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yumi_description/meshes/link_4.stl"/>
+          <mesh filename="package://yumi_description/meshes/coarse/link_4.stl"/>
         </geometry>
         <material name="Grey"/>
       </visual>
@@ -210,7 +210,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yumi_description/meshes/link_5.stl"/>
+          <mesh filename="package://yumi_description/meshes/coarse/link_5.stl"/>
         </geometry>
         <material name="Grey"/>
       </visual>
@@ -245,7 +245,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yumi_description/meshes/link_6.stl"/>
+          <mesh filename="package://yumi_description/meshes/coarse/link_6.stl"/>
         </geometry>
         <material name="Grey"/>
       </visual>
@@ -280,7 +280,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yumi_description/meshes/link_7.stl"/>
+          <mesh filename="package://yumi_description/meshes/coarse/link_7.stl"/>
         </geometry>
         <material name="Grey"/>
       </visual>
@@ -320,7 +320,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yumi_description/meshes/link_1.stl"/>
+          <mesh filename="package://yumi_description/meshes/coarse/link_1.stl"/>
         </geometry>
         <material name="Grey"/>
       </visual>
@@ -355,7 +355,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yumi_description/meshes/link_2.stl"/>
+          <mesh filename="package://yumi_description/meshes/coarse/link_2.stl"/>
         </geometry>
         <material name="Grey"/>
       </visual>
@@ -390,7 +390,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yumi_description/meshes/link_3.stl"/>
+          <mesh filename="package://yumi_description/meshes/coarse/link_3.stl"/>
         </geometry>
         <material name="Grey"/>
       </visual>
@@ -425,7 +425,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yumi_description/meshes/link_4.stl"/>
+          <mesh filename="package://yumi_description/meshes/coarse/link_4.stl"/>
         </geometry>
         <material name="Grey"/>
       </visual>
@@ -460,7 +460,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yumi_description/meshes/link_5.stl"/>
+          <mesh filename="package://yumi_description/meshes/coarse/link_5.stl"/>
         </geometry>
         <material name="Grey"/>
       </visual>
@@ -495,7 +495,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yumi_description/meshes/link_6.stl"/>
+          <mesh filename="package://yumi_description/meshes/coarse/link_6.stl"/>
         </geometry>
         <material name="Grey"/>
       </visual>
@@ -530,7 +530,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yumi_description/meshes/link_7.stl"/>
+          <mesh filename="package://yumi_description/meshes/coarse/link_7.stl"/>
         </geometry>
         <material name="Grey"/>
       </visual>
