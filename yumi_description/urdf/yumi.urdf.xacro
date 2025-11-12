@@ -10,6 +10,8 @@
   <xacro:include filename="$(find yumi_description)/urdf/Grippers/yumi_servo_gripper.xacro"/>
   <!-- Import Gazebo plugins -->
   <xacro:include filename="$(find yumi_description)/urdf/Gazebo/gazebo.urdf.xacro"/>
+  <!-- ROS2 Control -->
+  <xacro:include filename="$(find yumi_description)/urdf/yumi.ros2_control.xacro"/>
 
   <xacro:property name="yumi_setup" value="$(arg yumi_setup)" />
 
@@ -46,7 +48,7 @@
     <origin xyz="0 0 0.007" rpy="0 0 ${PI}" />
   </xacro:yumi_servo_gripper>
 
-
-
+  <!-- ROS2 Control -->
+  <xacro:yumi_ros2_control interface_type="mock"/>
 
 </robot>
